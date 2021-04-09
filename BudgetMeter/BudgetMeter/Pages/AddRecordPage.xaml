@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="BudgetMeter.Pages.AddRecordPage"
+              Title="Add Record"
+              x:Name="carousel"
+              >
+    <ContentPage x:Name="one">
+
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal"  VerticalOptions="StartAndExpand" HorizontalOptions="Center" Margin="10">
+                <Button WidthRequest="150" HeightRequest="40" BorderColor="Blue" TextColor="White" BackgroundColor="Blue" Text="Expence" Clicked="goToExpense"/>
+                <Button WidthRequest="150" HeightRequest="40" BorderColor="Blue" BorderWidth="2" BackgroundColor="White" Text="Income" Clicked="goToIncome"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="0,40">
+                <Entry Placeholder="Amount" WidthRequest="200" Keyboard="Numeric" x:Name="amount" x:DataType="x:Double" HorizontalTextAlignment="Center"/>
+                <Entry Placeholder="At" WidthRequest="200" Keyboard="Chat" x:Name="at" x:DataType="x:String" HorizontalTextAlignment="Center"/>
+                <Label Text="No category selected." x:Name="clist" IsVisible="false" HorizontalOptions="Center"/>
+                <Button Text="Add Category" x:Name="add_category" Clicked="add_category_Clicked"/>
+                <Label x:Name="errors" Text="Error" TextColor="Red" IsVisible="false" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Button Text="Create" Clicked="createExpence_Clicked" HorizontalOptions="Center" VerticalOptions="End" Margin="0,20"/>
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage x:Name="two">
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal"  VerticalOptions="StartAndExpand" HorizontalOptions="Center" Margin="10">
+                <Button WidthRequest="150" HeightRequest="40" BorderColor="Blue" BorderWidth="2"  BackgroundColor="White" Text="Expence" Clicked="goToExpense"/>
+                <Button WidthRequest="150" HeightRequest="40" BorderColor="Blue" TextColor="White"  BackgroundColor="Blue" Text="Income" Clicked="goToIncome"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="0,40">
+                <Entry Placeholder="Amount" WidthRequest="200" Keyboard="Numeric" x:Name="amountI" x:DataType="x:Double" HorizontalTextAlignment="Center"/>
+                <Entry Placeholder="From" WidthRequest="200" Keyboard="Chat" x:Name="from" x:DataType="x:String" HorizontalTextAlignment="Center"/>
+                <Label Text="No category selected." x:Name="clist2" IsVisible="false" HorizontalOptions="Center"/>
+                <Button Text="Add Category" x:Name="add_categoryI" Clicked="add_category_Clicked"/>
+                <Label x:Name="errorsI" Text="Error" TextColor="Red" IsVisible="false" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Button Text="Create" Clicked="createIncome_Clicked" HorizontalOptions="Center" VerticalOptions="End" Margin="0,20"/>
+        </StackLayout>
+
+    </ContentPage>
+</CarouselPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetMeter.Pages.ReportsPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <DatePicker x:Name="from" Format="d/M/yyyy"/>
+                <Label Text="-" VerticalOptions="Center" FontAttributes="Bold"/>
+                <DatePicker x:Name="to" Format="d/M/yyyy"/>
+            </StackLayout>
+            <Picker x:Name="type" WidthRequest="200" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                <Picker.Items>
+                    <x:String>All</x:String>
+                    <x:String>Expense</x:String>
+                    <x:String>Income</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="error" TextColor="Red" IsVisible="false" HorizontalOptions="Center" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" WidthRequest="200"/>
+            <Button Text="Show" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

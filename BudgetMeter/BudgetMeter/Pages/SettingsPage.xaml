@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetMeter.Pages.SettingsPage"
+             Style="{AppThemeBinding Light={StaticResource LContentpageStyle}, Dark={StaticResource DContentpageStyle}}"
+             >
+   
+        <TableView Intent="Data" Margin="0,5,0,0" RowHeight="45">
+        <TableRoot>
+            <TableSection>
+                <ViewCell Tapped="UserAccountLabelTapped">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="User Account" VerticalOptions="Center" Margin="20,0" />
+                        <Label Text="Manage your user account" FontSize="Small" VerticalOptions="Center" Margin="20,0"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="SalaryLabelTapped">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Change salary" VerticalOptions="Center" Margin="20,0" />
+                        <Label Text="Change your salary" FontSize="Small" VerticalOptions="Center" Margin="20,0"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="PinLabelTapped">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Pin" VerticalOptions="Center" Margin="20,0"/>
+                        <Label Text="Create/Change your pin" x:Name="pinLabel" FontSize="Small" VerticalOptions="Center" Margin="20,0"/>
+
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="CategoriesLabelTapped">
+                   <StackLayout  VerticalOptions="Center">
+                    <Label Text="My Categories" VerticalOptions="Center" Margin="20,0" />
+                        <Label Text="Manage your categories" FontSize="Small" VerticalOptions="Center" Margin="20,0"/>
+                </StackLayout>
+                </ViewCell>
+               
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local = "clr-namespace:BudgetMeter.Extentions"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="BudgetMeter.SlideMenu.SlideMenuFlyout"
+             Title="Flyout">
+
+    <ContentPage.Resources>
+        <local:EmbeddedToImageSourceConverter x:Key="converter"/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+      <ListView.Header>
+
+                <StackLayout Orientation="Horizontal" Background="#3F51B5" Margin="0,0,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Tapped="TapGestureRecognizer_Tapped" 
+                            NumberOfTapsRequired="1"
+                            />
+                    </StackLayout.GestureRecognizers>
+                    <Frame x:Name="circleFrame" HasShadow="False" Padding="0" Margin="10" HeightRequest="60" WidthRequest="60"  VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Gray" IsClippedToBounds="True" CornerRadius="100">
+                        <Image x:Name="avatar" Source="{local:ImageResource BudgetMeter.Images.profile.png}" Aspect="AspectFill"/>
+                    </Frame>
+                    <Label
+                            x:Name="Name_Label"
+                            Text="Helooo"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+        
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+              <StackLayout Orientation="Horizontal">
+                <Image Source="{Binding Icon, Converter={StaticResource converter}, ConverterParameter='BudgetMeter.Images'}" WidthRequest="25" HeightRequest="15" Margin="0,0,10,0"/>
+                  
+                <Label VerticalOptions="FillAndExpand"      
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    FontSize="18"       
+                 />
+               </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

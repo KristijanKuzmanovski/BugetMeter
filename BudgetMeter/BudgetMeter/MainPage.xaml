@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:local = "clr-namespace:BudgetMeter.Extentions"
+             x:Class="BudgetMeter.MainPage"
+             
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            
+        </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2" Margin="20,20,20,0" HorizontalOptions="FillAndExpand">
+            <Label Text="Total:" FontSize="35" HorizontalOptions="FillAndExpand" />
+            <Label  x:Name="total" Text="test" FontSize="35" HorizontalOptions="End" />
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,20,20" HorizontalOptions="FillAndExpand">
+            <Label Text="Income:" HorizontalOptions="End" x:Name="plus" FontSize="20" TextColor="Green"/>
+            <Label Text="Expensess:" HorizontalOptions="End" x:Name="minus" FontSize="20" TextColor="Red"/>
+        </StackLayout>
+        
+        <chart:SfChart x:Name="main_chart" Grid.ColumnSpan="2" Grid.Row="2" Margin="5,0"   >
+
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeCategoryAxis/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis/>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:StackingLineSeries x:Name="chart2" XBindingPath="date" YBindingPath="amount" Color="Green" Label="income"/>
+            <chart:StackingLineSeries  x:Name="chart" XBindingPath="date" YBindingPath="amount" Color="Red" Label="expense"/>
+            
+
+        </chart:SfChart>
+        <Button ImageSource="{local:ImageResource BudgetMeter.Images.plus.png}" Clicked="Button_Clicked" WidthRequest="70" HeightRequest="70" Grid.Row="3" Grid.Column="1" CornerRadius="100" Margin="15"/>
+        
+    </Grid>
+</ContentPage>

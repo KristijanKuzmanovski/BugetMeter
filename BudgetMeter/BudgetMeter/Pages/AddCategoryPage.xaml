@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Add Category"
+             xmlns:colorpicker="clr-namespace:ColorPicker;assembly=ColorPicker"
+             x:Class="BudgetMeter.Pages.AddCategoryPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="20">
+            <Entry Placeholder="Name" x:Name="name" HorizontalOptions="Center" WidthRequest="200"/>
+            <colorpicker:ColorWheel x:Name="ColorWheel1"
+                                SelectedColor="ForestGreen"
+                                HeightRequest="250"
+                                WidthRequest="250"
+                                Padding="5"
+                                />
+            <Button Text="Create" Clicked="Button_Clicked" HorizontalOptions="Center" WidthRequest="100" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

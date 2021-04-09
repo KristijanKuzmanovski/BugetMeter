@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetMeter.Pages.ShowRecordsPage"
+             xmlns:local = "clr-namespace:BudgetMeter.Extentions"
+             Title="Records"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="PDF"
+                 Order="Primary"
+                 Priority="0" 
+                 Clicked="ToolbarItem_Clicked"
+                     />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <local:ReportColorConverter x:Key="reportConverter"/>
+    </ContentPage.Resources>
+    <CollectionView x:Name="MyListView" SelectionChanged="MyListView_SelectionChanged" SelectionMode="Single" >
+        <CollectionView.Header>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Label x:Name="range" FontAttributes="Bold" HorizontalOptions="Center" FontSize="18" Margin="5"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label TextColor="Green" x:Name="income" FontAttributes="Bold" Margin="10,0" FontSize="20"/>
+                    <Label TextColor="red" x:Name="expense" FontAttributes="Bold" Margin="10,0" FontSize="20"/>
+                </StackLayout>
+            </StackLayout>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Label HorizontalOptions="StartAndExpand" Text="{Binding amount}" FontSize="16" FontAttributes="Bold" TextColor="{Binding type, Converter={StaticResource reportConverter}}"/>
+                        <Label HorizontalOptions="CenterAndExpand" Text="{Binding description}" FontSize="18" FontAttributes="Bold"/>
+                        <Label HorizontalOptions="End" Text="{Binding date}" FontSize="Small"/>
+                    </StackLayout>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

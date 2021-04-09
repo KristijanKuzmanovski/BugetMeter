@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetMeter.ModalPages.PinModalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Enter Pin"
+                       Margin="30"
+                       FontSize="18" 
+                       TextColor="Blue"
+                       HorizontalOptions="Center" 
+                           x:Name="header"
+                />
+
+                    <StackLayout Margin="0,0,0,30">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <StackLayout Grid.Row="0" Grid.Column="2" HeightRequest="28" WidthRequest="28">
+                                <Ellipse x:Name="PasscodeOne" Fill="#8F8F8F" WidthRequest="20" HeightRequest="20" Aspect="Fill" StrokeThickness="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="3" HeightRequest="28" WidthRequest="28">
+                                
+                                    <Ellipse x:Name="PasscodeTwo" Fill="#8F8F8F" WidthRequest="20" HeightRequest="20" Aspect="Fill" StrokeThickness="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="4" HeightRequest="28" WidthRequest="28">
+                                    <Ellipse x:Name="PasscodeThree" Fill="#8F8F8F" WidthRequest="20" HeightRequest="20" Aspect="Fill" StrokeThickness="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="5" HeightRequest="28" WidthRequest="28">
+                                <Ellipse x:Name="PasscodeFour" Fill="#8F8F8F" WidthRequest="20" HeightRequest="20" Aspect="Fill" StrokeThickness="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                            </StackLayout>
+
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="End" HeightRequest="72" WidthRequest="72">
+                                <Button Text="1"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinOne_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="1" HeightRequest="72" WidthRequest="72">
+                                <Button Text="2"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    HorizontalOptions="Center"
+                                    Clicked="PinTwo_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Start" HeightRequest="72" WidthRequest="72">
+                                <Button Text="3"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinThree_Tapped"
+                                    />
+                            </StackLayout>
+
+
+                            <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="End" HeightRequest="72" WidthRequest="72">
+                                <Button Text="4"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinFour_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="1" HeightRequest="72" WidthRequest="72">
+                                <Button Text="5"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    HorizontalOptions="Center"
+                                    Clicked="PinFive_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="2" HorizontalOptions="Start" HeightRequest="72" WidthRequest="72">
+                                <Button Text="6"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinSix_Tapped"
+                                    />
+                            </StackLayout>
+
+
+                            <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="End" HeightRequest="72" WidthRequest="72">
+                                <Button Text="7"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinSeven_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="2" Grid.Column="1" HeightRequest="72" WidthRequest="72">
+                                <Button Text="8"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    HorizontalOptions="Center"
+                                    Clicked="PinEight_Tapped"
+                                    />
+                            </StackLayout>
+                            <StackLayout Grid.Row="2" Grid.Column="2" HorizontalOptions="Start" HeightRequest="72" WidthRequest="72">
+                                <Button Text="9"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinNine_Tapped"
+                                    />
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="3" Grid.Column="1" HeightRequest="72" WidthRequest="72">
+                                <Button Text="0"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinZero_Tapped"
+                                    HorizontalOptions="Center"
+                                    />
+                            </StackLayout>
+                            
+                            <StackLayout Grid.Row="3" Grid.Column="2" HorizontalOptions="Start" HeightRequest="72" WidthRequest="72">
+                                <Button Text="X"
+                                    FontSize="36" 
+                                    TextColor="Black"
+                                    CornerRadius="50"
+                                    BackgroundColor="#D6D6D6"
+                                    HeightRequest="72"
+                                    WidthRequest="72"
+                                    Clicked="PinDelete_Tapped"
+                                    />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

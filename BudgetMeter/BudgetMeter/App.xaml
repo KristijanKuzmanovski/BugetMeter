@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetMeter.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="LContentpageStyle" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="NavigationPage.BarBackgroundColor" Value="#B0BEC5"/>
+            </Style>
+            <Style x:Key="DContentpageStyle" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#121212"/>
+                <Setter Property="NavigationPage.BarBackgroundColor" Value="#2C2C2EFF"/>
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="#CFD8DC" />
+                <Setter Property="BorderRadius" Value="50" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style x:Key="DbuttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="#303030" />
+                <Setter Property="BorderRadius" Value="50" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="TextColor" Value="#FFFFFF" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
