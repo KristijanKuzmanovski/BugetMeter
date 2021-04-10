@@ -1,7 +1,7 @@
-# FalangaSocialNetwork
-Facebook clone
+# BudgetMeter
 
-Framework: Laravel
-Back-end: PHP
-Front-end: Vue.js and Bootstrap
-Communication: Socket.io
+Framework: Xamarin
+Backend: C#
+Frontend: XAML
+Stoarge: Firebase Realtime Database, Firbase Storage
+Authentication: Firebase Authentication
